@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Contact us | Elementiq</title>
+  <link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css">
+</head>
+<body data-page="contact.html">
+  <div class="orb a"></div><div class="orb b"></div><div class="orb c"></div>
+  <div class="wrap">
+    <header class="nav" id="site-nav"></header>
+    <section class="hero">
+      <div class="inner hero-split">
+        <div>
+          <p class="kicker reveal">Contact</p>
+          <h1 class="reveal d1">Talk to us. <em>We are here.</em></h1>
+          <p class="lede reveal d2">Questions about Design, Studio, install, or AI setup? Send a message and we will help you get building inside WordPress. You can also open the chat bubble anytime — it uses the same contact form.</p>
+          <div class="row reveal d3">
+            <a class="btn btn-p" href="#contact-form">Open the contact form</a>
+            <button class="btn btn-g" type="button" data-open-chat>Open chat</button>
+          </div>
+        </div>
+        <div class="hero-visual reveal d4">
+          <span class="float-chip a">WordPress plugin support</span>
+          <span class="float-chip b">Usually replies in one business day</span>
+          <div class="desk">
+            <div class="chrome"><i></i><i></i><i></i><span>Contact. Elementiq</span></div>
+            <div class="contact-hero-card">
+              <img src="assets/brand/wordpress.svg" width="56" height="56" alt="">
+              <h3>Chat or write to us</h3>
+              <p>The WordPress mark on the chat bubble opens this same form. Use whichever feels faster.</p>
+            </div>
+            <p class="cap">Same form in the page and in the chat popup.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="contact">
+      <div class="inner split onscroll">
+        <div>
+          <p class="kicker">Write to us</p>
+          <h2>Send a message. <em>We read every one.</em></h2>
+          <p class="lede">Tell us what you are trying to do. Mention whether you are in Design or Studio if the question is about the editor.</p>
+          <form class="contact-form" id="contact-form" novalidate>
+            <div class="form-row">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" placeholder="Your name" required>
+            </div>
+            <div class="form-row">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+            </div>
+            <div class="form-row">
+              <label for="topic">What is this about?</label>
+              <select id="topic" name="topic" required>
+                <option value="" disabled selected>Choose a topic</option>
+                <option value="design">Design editor</option>
+                <option value="studio">Studio and AI</option>
+                <option value="install">Install and activation</option>
+                <option value="keys">AI setup and API keys</option>
+                <option value="billing">Account or licensing</option>
+                <option value="other">Something else</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="6" placeholder="How can we help?" required></textarea>
+            </div>
+            <button class="btn btn-p" type="submit">Send message</button>
+            <p class="form-note">We use this to reply about Elementiq. Do not send passwords or API keys.</p>
+            <p class="form-status" hidden></p>
+          </form>
+        </div>
+        <div class="contact-aside">
+          <div class="card">
+            <div class="mark"><img src="assets/brand/wordpress.svg" width="22" height="22" alt=""></div>
+            <h3>Prefer chat?</h3>
+            <p>Tap the WordPress logo in the corner. The popup is this contact form in a smaller window.</p>
+            <div class="row"><button class="btn btn-p" type="button" data-open-chat>Open chat</button></div>
+          </div>
+          <div class="card">
+            <h3>Help first</h3>
+            <p>Install steps, Design vs Studio, and troubleshooting are already documented.</p>
+            <div class="row">
+              <a class="btn btn-g" href="help.html">Read the guide</a>
+              <a class="btn btn-g" href="faq.html">Open FAQ</a>
+            </div>
+          </div>
+          <div class="card">
+            <h3>What to include</h3>
+            <p>Your WordPress version, whether the plugin is active, and whether the issue is in Design, Studio, or Settings. That helps us answer faster.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page">
+      <div class="inner onscroll">
+        <h2>Other ways to get unstuck</h2>
+        <div class="grid g3">
+          <a class="card" href="install.html"><h3>Install Elementiq</h3><p>Upload the ZIP in WordPress, activate the plugin, then open Pages.</p></a>
+          <a class="card" href="start.html"><h3>Start building</h3><p>Create a page, choose Design or Studio, preview, then save.</p></a>
+          <a class="card" href="keys.html"><h3>AI setup</h3><p>Connect a provider and API key before you generate in Studio.</p></a>
+        </div>
+      </div>
+    </section>
+    <footer class="site-foot" id="site-foot"></footer>
+  </div>
+  <script src="js/site.js"></script>
+</body>
+</html>

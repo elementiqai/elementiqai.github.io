@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Help | Elementiq</title>
+  <link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css">
+</head>
+<body data-page="help.html">
+  <div class="orb a"></div><div class="orb b"></div>
+  <div class="wrap">
+    <header class="nav" id="site-nav"></header>
+    <section class="hero hero-page">
+      <div class="inner">
+        <p class="kicker reveal">Documentation</p>
+        <h1 class="reveal d1">Guides for building, saving, <em>and fixing issues.</em></h1>
+        <p class="lede reveal d2">Use this page as the help hub. Start with the task you need, then open the matching guide. Elementiq is a WordPress plugin with two editors: Design for drag and drop, Studio for AI assisted coding.</p>
+      </div>
+    </section>
+    <section class="band">
+      <div class="inner onscroll">
+        <h2>Learn by task</h2>
+        <div class="grid g3">
+          <a class="card" href="start.html"><h3>Getting started</h3><p>Install, open WordPress, create a page, choose Design or Studio, preview, and save.</p></a>
+          <a class="card" href="install.html"><h3>Installation</h3><p>Upload the ZIP from Plugins → Add New, activate Elementiq, and find it in the admin menu.</p></a>
+          <a class="card" href="editor.html"><h3>Using Design</h3><p>Drag widgets onto the canvas, style them in the inspector, then preview desktop, tablet, and mobile.</p></a>
+          <a class="card" href="studio.html"><h3>Using Studio</h3><p>Describe the page. Studio writes HTML, CSS, and JavaScript. Refine the live preview next.</p></a>
+          <a class="card" href="keys.html"><h3>AI setup</h3><p>Open Settings, connect a provider, paste an API key, and test it before generating.</p></a>
+          <a class="card" href="preview.html"><h3>Live preview</h3><p>Click the rendered page in Studio to change text, colors, sizes, and images.</p></a>
+        </div>
+      </div>
+    </section>
+    <section class="page">
+      <div class="inner onscroll">
+        <h2>Saving changes</h2>
+        <p class="lede">Use Save to keep work on the current page. Use Update or Publish when you want WordPress to show the page to visitors. Pages live on your WordPress site. They are not exported to another platform.</p>
+        <div class="grid g2">
+          <div class="card"><h3>If nothing appears on the front</h3><p>Confirm the page is published, not still a draft. Open Pages, choose View, and check the permalink.</p></div>
+          <div class="card"><h3>If the editor looks empty after a save</h3><p>Reload the page in Elementiq. If it still fails, see troubleshooting below.</p></div>
+        </div>
+      </div>
+    </section>
+    <section class="band">
+      <div class="inner onscroll">
+        <h2>Troubleshooting</h2>
+        <p class="lede">Try these steps first. They cover the problems people hit most often after a new install.</p>
+        <div class="faq">
+          <details open>
+            <summary>Elementiq does not appear after activation</summary>
+            <p>Confirm the plugin is listed as Active under Plugins. Refresh the dashboard. Look for Elementiq in the left menu. If it is missing, deactivate and activate once more. You need an administrator account.</p>
+          </details>
+          <details>
+            <summary>The editor does not load</summary>
+            <p>Hard refresh the browser (Ctrl+F5). Try another browser, or disable a conflicting admin plugin briefly. Confirm you opened the page from Elementiq → Pages rather than a random admin URL.</p>
+          </details>
+          <details>
+            <summary>Studio cannot generate code</summary>
+            <p>Open Settings and confirm a provider is selected. Send a shorter request. If the provider is down, wait and try again. The page you already built stays in WordPress.</p>
+          </details>
+          <details>
+            <summary>The AI provider is not connected</summary>
+            <p>Go to Elementiq → Settings. Choose a provider, paste a key, and use the test action if it is available. Design still works without a key.</p>
+          </details>
+          <details>
+            <summary>The API key is invalid</summary>
+            <p>Copy the key again from the provider dashboard. Remove extra spaces. Confirm the key belongs to the provider you selected in Settings. Billing or quota issues on the provider side can also look like an invalid key.</p>
+          </details>
+          <details>
+            <summary>The live preview does not update</summary>
+            <p>Wait for Studio to finish applying files. Click Preview again in Explorer. If the preview is stale, save, reload the builder, then reopen Studio.</p>
+          </details>
+          <details>
+            <summary>Changes are not being saved</summary>
+            <p>Click Save, then confirm WordPress did not show an error. Check that you are still logged in. If Update fails, try saving as a draft first, then publish from Pages.</p>
+          </details>
+        </div>
+        <div class="row">
+          <a class="btn btn-p" href="faq.html">Open the FAQ</a>
+          <a class="btn btn-g" href="install.html">Install Elementiq</a>
+        </div>
+      </div>
+    </section>
+    <footer class="site-foot" id="site-foot"></footer>
+  </div>
+  <script src="js/site.js"></script>
+</body>
+</html>

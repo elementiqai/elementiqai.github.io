@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 128" fill="none">
+  <defs>
+    <linearGradient id="aiwb-wmd-g" x1="64" y1="16" x2="64" y2="112" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#d6107c"/>
+      <stop offset="1" stop-color="#93003f"/>
+    </linearGradient>
+  </defs>
+  <rect x="16" y="16" width="96" height="96" rx="24" fill="url(#aiwb-wmd-g)"/>
+  <g transform="translate(16 16) scale(1.5)">
+    <path fill="#fff" fill-rule="evenodd" d="M32 11.2 52.6 53h-9.6l-3.7-9.5H24.7L21 53h-9.6L32 11.2Zm0 13.2-3.95 10.1h7.9L32 24.4Z"/>
+    <path fill="#fff" d="M49.6 11.4 51.5 15.4l4 1.9-4 1.9-1.9 4-1.9-4-4-1.9 4-1.9 1.9-4Z"/>
+  </g>
+  <text x="132" y="62" fill="#d6107c" font-family="Roboto, Arial, Helvetica, sans-serif" font-size="34" font-weight="800" letter-spacing="-1">Elementiq</text>
+  <text x="132" y="96" fill="#ffffff" font-family="Roboto, Arial, Helvetica, sans-serif" font-size="20" font-weight="600">AI Web Builder</text>
+</svg>
