@@ -89,9 +89,9 @@ function ensureHead() {
     drawer.className = "drawer";
     drawer.id = "drawer";
     const group = (label, items) =>
-      `<details class="drawer-group"><summary>${label}</summary>${items
+      `<div class="drawer-group"><button type="button" class="drawer-toggle" aria-expanded="false">${label}</button><div class="drawer-sub" hidden>${items
         .map(([h, l]) => `<a href="${h}" class="${h === here ? "on" : ""}">${l}</a>`)
-        .join("")}</details>`;
+        .join("")}</div></div>`;
     drawer.innerHTML = `<div class="drawer-panel">
       <button class="btn btn-g drawer-close" type="button" id="drawer-close">Close</button>
       <h4>Menu</h4>
@@ -107,16 +107,40 @@ function ensureHead() {
       <a href="start.html">Start building</a>
     </div>`;
     document.body.appendChild(drawer);
-    const openDrawer = () => {
-      drawer.querySelectorAll("details").forEach((d) => {
-        d.open = false;
+    const closeGroups = () => {
+      drawer.querySelectorAll(".drawer-group").forEach((groupEl) => {
+        groupEl.classList.remove("is-open");
+        const toggle = groupEl.querySelector(".drawer-toggle");
+        const sub = groupEl.querySelector(".drawer-sub");
+        if (toggle) toggle.setAttribute("aria-expanded", "false");
+        if (sub) sub.hidden = true;
       });
+    };
+    const openDrawer = () => {
+      closeGroups();
       drawer.classList.add("open");
     };
-    const closeDrawer = () => drawer.classList.remove("open");
+    const closeDrawer = () => {
+      closeGroups();
+      drawer.classList.remove("open");
+    };
     document.getElementById("menu-btn")?.addEventListener("click", openDrawer);
     document.getElementById("drawer-close")?.addEventListener("click", closeDrawer);
     drawer.addEventListener("click", (e) => {
+      const toggle = e.target.closest(".drawer-toggle");
+      if (toggle) {
+        e.preventDefault();
+        const groupEl = toggle.closest(".drawer-group");
+        const sub = groupEl?.querySelector(".drawer-sub");
+        const willOpen = !!sub?.hidden;
+        closeGroups();
+        if (willOpen && groupEl && sub) {
+          groupEl.classList.add("is-open");
+          toggle.setAttribute("aria-expanded", "true");
+          sub.hidden = false;
+        }
+        return;
+      }
       if (e.target === drawer) closeDrawer();
     });
 

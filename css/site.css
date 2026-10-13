@@ -646,8 +646,10 @@ a.card { display: block }
 }
 .drawer-panel h4 { margin: 18px 0 8px; color: var(--acc-2); font-size: 11px; letter-spacing: .14em; text-transform: uppercase }
 .drawer-group { border-bottom: 1px solid var(--line) }
-.drawer-group summary {
-  list-style: none;
+.drawer-toggle {
+  width: 100%;
+  border: 0;
+  background: transparent;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -655,13 +657,14 @@ a.card { display: block }
   min-height: 44px;
   padding: 12px 0;
   color: var(--acc-2);
+  font: inherit;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: .14em;
   text-transform: uppercase;
+  text-align: left;
 }
-.drawer-group summary::-webkit-details-marker { display: none }
-.drawer-group summary:after {
+.drawer-toggle:after {
   content: "";
   width: 0;
   height: 0;
@@ -669,9 +672,10 @@ a.card { display: block }
   border-right: 5px solid transparent;
   border-top: 6px solid currentColor;
 }
-.drawer-group[open] summary:after { transform: rotate(180deg) }
-.drawer-group:not([open]) > a { display: none !important }
-.drawer-group[open] > a { display: block; padding-left: 8px; border-bottom: 0 }
+.drawer-group.is-open .drawer-toggle:after { transform: rotate(180deg) }
+.drawer-sub[hidden] { display: none !important }
+.drawer-group.is-open > .drawer-sub:not([hidden]) { display: block !important }
+.drawer-sub a { padding-left: 8px; border-bottom: 0 }
 .drawer-panel a { display: block; padding: 12px 0; border-bottom: 1px solid var(--line); color: var(--txt-1); min-height: 44px }
 .drawer-panel a.on { color: #fff }
 .drawer-close { float: right }
