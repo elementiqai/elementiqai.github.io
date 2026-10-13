@@ -210,7 +210,10 @@ code {
   box-shadow: var(--shadow);
   z-index: 70;
 }
-.drop:hover .drop-menu, .drop.open .drop-menu { display: grid; gap: 2px }
+.drop.open .drop-menu { display: grid; gap: 2px }
+@media (hover: hover) and (pointer: fine) {
+  .drop:hover .drop-menu { display: grid; gap: 2px }
+}
 .drop-menu a {
   padding: 10px 12px;
   border-radius: 10px;
@@ -642,6 +645,32 @@ a.card { display: block }
   border-radius: 999px;
 }
 .drawer-panel h4 { margin: 18px 0 8px; color: var(--acc-2); font-size: 11px; letter-spacing: .14em; text-transform: uppercase }
+.drawer-group { border-bottom: 1px solid var(--line) }
+.drawer-group summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 44px;
+  padding: 12px 0;
+  color: var(--acc-2);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+.drawer-group summary::-webkit-details-marker { display: none }
+.drawer-group summary:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid currentColor;
+}
+.drawer-group[open] summary:after { transform: rotate(180deg) }
+.drawer-group a { border-bottom: 0; padding-left: 8px }
 .drawer-panel a { display: block; padding: 12px 0; border-bottom: 1px solid var(--line); color: var(--txt-1); min-height: 44px }
 .drawer-panel a.on { color: #fff }
 .drawer-close { float: right }

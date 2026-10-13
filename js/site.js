@@ -88,12 +88,16 @@ function ensureHead() {
     const drawer = document.createElement("div");
     drawer.className = "drawer";
     drawer.id = "drawer";
+    const group = (label, items) =>
+      `<details class="drawer-group"><summary>${label}</summary>${items
+        .map(([h, l]) => `<a href="${h}" class="${h === here ? "on" : ""}">${l}</a>`)
+        .join("")}</details>`;
     drawer.innerHTML = `<div class="drawer-panel">
       <button class="btn btn-g drawer-close" type="button" id="drawer-close">Close</button>
       <h4>Menu</h4>
       <a href="index.html" class="${here === "index.html" ? "on" : ""}">Home</a>
-      <h4>Product</h4>${PRODUCT.map(([h, l]) => `<a href="${h}" class="${h === here ? "on" : ""}">${l}</a>`).join("")}
-      <h4>Guide</h4>${GUIDE.map(([h, l]) => `<a href="${h}" class="${h === here ? "on" : ""}">${l}</a>`).join("")}
+      ${group("Product", PRODUCT)}
+      ${group("Guide", GUIDE)}
       <h4>More</h4>
       <a href="features.html">Features</a>
       <a href="woocommerce.html">WooCommerce</a>
