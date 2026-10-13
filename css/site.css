@@ -966,9 +966,20 @@ a.card { display: block }
   .journey:before { display: none }
 }
 @media (max-width: 800px) {
+  body { font-size: 17.5px; line-height: 1.7 }
+  h1 { font-size: clamp(38px, 10vw, 54px) }
+  h2 { font-size: clamp(30px, 5.2vw, 46px) }
+  h3 { font-size: 20px }
+  .lede { font-size: 18px }
+  .card p, .faq p, .faq details p, .site-foot a, .foot-brand p, .contact-hero-card p, .step p { font-size: 16.5px }
+  .btn, .links > a, .drop > button { font-size: 15.5px }
+  .kicker, .drawer-panel h4 { font-size: 12px }
+  .drawer-toggle { font-size: 13px }
+  .drawer-panel a { font-size: 17px }
+  .cap, .stat span, .form-note, .foot-bar { font-size: 14.5px }
+  .word em, .chrome span { font-size: 12px }
   .g3, .g2, .g4, .stats, .bento, .journey, .foot-grid { grid-template-columns: 1fr }
   .stats { grid-template-columns: 1fr 1fr }
-  h1 { font-size: clamp(32px, 9vw, 46px) }
   .desk { padding: 10px 10px 0; border-radius: 16px; overflow: visible }
   .shot, .shot img, .bento .span-2 img {
     width: 100%;
@@ -994,11 +1005,9 @@ a.card { display: block }
   .chat-body .lede { display: none }
 }
 @media (max-width: 480px) {
-  body { font-size: 15px }
   .card, .bento .feature, .j-card { padding: 18px }
   .hero, .page, .band, .cta-band { padding: 40px 16px }
   .nav { padding: 10px 16px }
-  .chrome span { font-size: 10px }
 }
 @media (prefers-reduced-motion: reduce) {
   .reveal, .orb, .shot:after, .hero-visual .desk, .float-chip, .ticker-track, .cta-panel .btn-p, .chat-fab { animation: none !important }

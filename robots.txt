@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://elementiqai.github.io/sitemap.xml
