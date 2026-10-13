@@ -71,7 +71,7 @@ function ensureHead() {
         <a href="contact.html" class="${here === "contact.html" ? "on" : ""}">Contact</a>
       </nav>
       <a class="btn btn-p nav-cta" href="install.html">Install Elementiq</a>
-      <button class="btn btn-g" type="button" id="menu-btn" aria-label="Open menu">Menu</button>`;
+      <button class="btn btn-g" type="button" id="menu-btn" aria-label="Open menu"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>`;
 
     nav.querySelectorAll(".drop").forEach((d) => {
       const btn = d.querySelector("button");
@@ -94,7 +94,6 @@ function ensureHead() {
         .join("")}</div></div>`;
     drawer.innerHTML = `<div class="drawer-panel">
       <button class="btn btn-g drawer-close" type="button" id="drawer-close">Close</button>
-      <h4>Menu</h4>
       <a href="index.html" class="${here === "index.html" ? "on" : ""}">Home</a>
       ${group("Product", PRODUCT)}
       ${group("Guide", GUIDE)}
