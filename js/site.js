@@ -107,7 +107,12 @@ function ensureHead() {
       <a href="start.html">Start building</a>
     </div>`;
     document.body.appendChild(drawer);
-    const openDrawer = () => drawer.classList.add("open");
+    const openDrawer = () => {
+      drawer.querySelectorAll("details").forEach((d) => {
+        d.open = false;
+      });
+      drawer.classList.add("open");
+    };
     const closeDrawer = () => drawer.classList.remove("open");
     document.getElementById("menu-btn")?.addEventListener("click", openDrawer);
     document.getElementById("drawer-close")?.addEventListener("click", closeDrawer);
