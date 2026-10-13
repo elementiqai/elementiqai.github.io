@@ -97,7 +97,6 @@ function ensureHead() {
       <a href="index.html" class="${here === "index.html" ? "on" : ""}">Home</a>
       ${group("Product", PRODUCT)}
       ${group("Guide", GUIDE)}
-      <h4>More</h4>
       <a href="features.html">Features</a>
       <a href="woocommerce.html">WooCommerce</a>
       <a href="about.html">About</a>
