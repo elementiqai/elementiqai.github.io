@@ -176,11 +176,8 @@ function ensureHead() {
       </div>
       <div><h4>In WordPress</h4>
         <a href="theme.html">Header and footer</a>
-        <a href="whats-new.html#clone">Clone Website</a>
         <a href="whats-new.html#forms">Forms and SMTP</a>
         <a href="seo.html">SEO</a>
-        <a href="security.html">Cybersecurity</a>
-        <a href="files.html">File Manager</a>
         <a href="woocommerce.html">WooCommerce</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
