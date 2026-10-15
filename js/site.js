@@ -2,6 +2,7 @@ const FONT_HREF =
   "https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap";
 
 const PRODUCT = [
+  ["whats-new.html", "What’s new", "New tools with step-by-step screenshots"],
   ["editor.html", "Design", "Visual drag and drop editor"],
   ["studio.html", "Studio", "AI assisted coding workspace"],
   ["preview.html", "Live preview", "Edit the rendered page"],
@@ -156,6 +157,7 @@ function ensureHead() {
         <p>Elementiq is a powerful WordPress website builder that combines visual drag and drop design with AI assisted coding. It installs as a plugin and runs inside your WordPress dashboard.</p>
       </div>
       <div><h4>Product</h4>
+        <a href="whats-new.html">What’s new</a>
         <a href="editor.html">Design</a>
         <a href="studio.html">Studio</a>
         <a href="preview.html">Live preview</a>
@@ -174,6 +176,8 @@ function ensureHead() {
       </div>
       <div><h4>In WordPress</h4>
         <a href="theme.html">Header and footer</a>
+        <a href="whats-new.html#clone">Clone Website</a>
+        <a href="whats-new.html#forms">Forms and SMTP</a>
         <a href="seo.html">SEO</a>
         <a href="security.html">Cybersecurity</a>
         <a href="files.html">File Manager</a>

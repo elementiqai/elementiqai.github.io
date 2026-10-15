@@ -953,6 +953,28 @@ a.card { display: block }
 .section-lead { display: flex; justify-content: space-between; gap: 24px; align-items: end; flex-wrap: wrap }
 .section-lead .lede { margin: 0 }
 
+.toc { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px }
+.toc a { transition: border-color .2s, color .2s }
+.toc a:hover { border-color: var(--acc-2); color: #fff }
+.tag-new {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #d6107c, #93003f);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.howto { scroll-margin-top: 90px }
+.howto .split { align-items: start }
+.howto .desk { margin-top: 0 }
+.howto .shot a { display: block; cursor: zoom-in }
+.split.rev > .desk { order: -1 }
+.desk + .desk { margin-top: 18px }
+
 @media (max-width: 1100px) {
   .links, .nav-cta { display: none }
   #menu-btn { display: inline-flex }
